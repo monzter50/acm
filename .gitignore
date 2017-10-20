@@ -1,0 +1,8 @@
+.idea/workspace.xml
+/node_modules/
+/css/main.min.css
+.idea
+.vscode
+.DS_Store
+
+/vendor/

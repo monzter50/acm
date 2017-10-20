@@ -1,0 +1,23 @@
+{
+  "name": "acm",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "dependencies": {
+    "popper.js": "^1.12.5"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/monzter50/acm.git"
+  },
+  "author": "monster",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/monzter50/acm/issues"
+  },
+  "homepage": "https://github.com/monzter50/acm#readme"
+}

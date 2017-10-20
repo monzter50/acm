@@ -1,0 +1,75 @@
+{% extends 'main.twig' %}
+
+{% block Content %}
+
+<header class="container-fluid mb-3" id="home">
+    <div class="row">
+        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+                {% for slide in sliders %}
+				    <div class="carousel-item {% if loop.first %}active{% endif %}">
+						<img class="w-100 d-none d-sm-block" src="{{ slide.img }}" alt="{{ slide.title }}">
+						<img class="w-100 d-block d-sm-none" src="{{ slide.imgmov }}" alt="{{ slide.title }}">
+							{% if slide.over is defined %}
+                                <a href="{{ slide.link }}" class="carousel-caption d-none d-md-block w-100 p-5">
+                                    <img src="{{ slide.over }}" class="img-fluid" alt="">
+                                </a>
+						    {% endif %}
+					</div>
+				{% endfor %}
+            </div>    
+        </div>
+    </div>
+</header>
+
+<section class="container">
+    <div class="row">
+        <div class="col"> 
+            <h2>BIENVENIDOS A CONSULTORIA CORPORATIVA</h2>
+            <p>Somos un despacho de Asesoría Corporativa en Cancún Quintana Roo. Nuestra asesoría va enfocada a la atención de personas tanto físicas como morales.
+        Brindamos la orientación que necesita para cumplir con las obligaciones fiscales con puntualidad.Dentro de los servicios que ofrecemos se encuentra el área contable, fiscal, financiera y administrativo.</p>
+        </div>
+    </div>
+     <div class="row mt-5">                
+            <div class="col-12 col-lg-6">
+                <h2 class="texto-linea">NUESTRO VALORES</h2>
+            </div>
+        </div>     
+    <div class="row">   
+        {% for item in ope.valores %}
+            <div class="col-lg-4 col-md-6 col-12">
+                <img src="{{item[2]}}" class="img-fluid">
+                <h4><a href="#" data-toggle="modal" data-target="#exampleModal{{loop.index}}">{{ item[0] }}</a></h4>
+                {# <p>{{ item[1] }}</p> #}
+            </div>
+            <!--##################################### Modals Reservate Table #####################################################-->
+            <div class="modal fade" id="exampleModal{{loop.index}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel{{loop.index}}" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content w-100">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel{{loop.index}}">{{ item[0] }}</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <p>{{ item[1] }}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+{# ################################################################################################################ #}
+        {% endfor %}
+    </div>
+
+   
+</section>
+
+
+
+{% endblock %}
