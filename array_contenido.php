@@ -2,9 +2,9 @@
 
 $op = array(
 	'menuNav' => array(
-		['about-us.php', 'Inicio'],
-		['#', 'Nosotros'],
-		['#', 'Servicio'],
+		['index.php', 'Inicio'],
+		['nosotros.php', 'Nosotros'],
+		['servicios.php', 'Servicio'],
 		['contact.php', 'Contactanos'],
 	),
 	'footerInf' => array(
@@ -37,7 +37,51 @@ $ope[principal] = array(
 		['CONFIDENCIALIDAD', 'Entendemos la lealtad que nos une a nuestros clientes y lo que es importante para ellos se convierte automáticamente valioso para nosotros por lo que cuidamos su información en ese mismo grado.', 'img/confidencialidad.jpg'],
 		['CALIDAD', 'Somos conscientes de la importancia de nuestros servicios y la necesidad de que se realicen en el tiempo adecuado. De la misma manera nuestro equipo de trabajo refleja la calidad iniciando desde nuestro trato.', 'img/calidad.jpg'],
 	),
+	'cont' => array(
+		[
+			'title' => 'Nuestros Clientes',
+			'bodytext' => 'Tenemos un compromiso mutuo con nuestros clientes. Queremos brindarles los mejores servicios posibles, y ansiamos recibir sus opiniones y reacciones con el fin de poder seguir mejorando y creando ideas innovadoras para satisfacer sus necesidades.',
+			'image' => 'https://dummyimage.com/500x300/1f3022/fff.png',
+		],
 
-)
+	),
+
+);
+
+$ope[nosotros] = array(
+
+	'cont' => array(
+		[
+			'title' => 'Nosotros',
+			'bodytext' => 'Somos un despacho de Asesoría Corporativa en Cancún Quintana Roo. Nuestra asesoría va enfocada a la atención de personas tanto físicas como morales. Brindamos la orientación que necesita para cumplir con las obligaciones fiscales con puntualidad. Dentro de los servicios que ofrecemos se encuentra el área contable, fiscal, financiera y administrativo.',
+		],
+		[
+			'mision' => '"Nuestra misión es crear la mejor experiencia de usuario que permiten a las personas resolver sus necesidades con nosotros."',
+		],
+	),
+	'servicios' => array(
+
+		[
+			'title' => 'Servicios Contables',
+			'image' => '',
+		],
+		[
+			'title' => 'Asesoría Fiscal',
+			'image' => '',
+		],
+		[
+			'title' => 'Peritajes',
+			'image' => '',
+		],
+		[
+			'title' => 'Asuntos Juridicos',
+			'image' => '',
+		],
+	),
+);
+
+$ope[servicios] = array(
+
+);
 
 ?>

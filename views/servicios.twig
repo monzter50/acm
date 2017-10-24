@@ -1,0 +1,39 @@
+{% extends 'main.twig' %}
+{% block Content %}
+<header class="container-fluid mb-3" id="home">
+    <div class="row">
+        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+                {% for slide in sliders %}
+                    <div class="carousel-item {% if loop.first %}active{% endif %}">
+                        <img class="w-100 d-none d-sm-block" src="{{ slide.img }}" alt="{{ slide.title }}">
+                        <img class="w-100 d-block d-sm-none" src="{{ slide.imgmov }}" alt="{{ slide.title }}">
+                            {% if slide.over is defined %}    
+                                    <img src="{{ slide.over }}" class="img-fluid" alt="">
+                            {% endif %}
+                    </div>
+                {% endfor %}
+            </div>    
+        </div>
+    </div>
+</header>
+
+<section class="container">
+
+    <div class="row {% if cont.pingpong == true and loop.index is odd or item.left %}flex-row-reverse{% endif %}">
+        <div class="col-12 col-md-6">
+            
+        </div>
+        <div class="col-12 col-md-6">
+            
+        </div>
+    </div>
+    
+</section>
+
+{% endblock %}

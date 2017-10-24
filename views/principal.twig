@@ -30,19 +30,19 @@
 <section class="container">
     <div class="row">
         <div class="col"> 
-            <h2>BIENVENIDOS A CONSULTORIA CORPORATIVA</h2>
+            <h2>Bienvenidos a Consultoria Corporativa</h2>
             <p>Somos un despacho de Asesoría Corporativa en Cancún Quintana Roo. Nuestra asesoría va enfocada a la atención de personas tanto físicas como morales.
         Brindamos la orientación que necesita para cumplir con las obligaciones fiscales con puntualidad.Dentro de los servicios que ofrecemos se encuentra el área contable, fiscal, financiera y administrativo.</p>
         </div>
     </div>
      <div class="row mt-5">                
             <div class="col-12 col-lg-6">
-                <h2 class="texto-linea">NUESTRO VALORES</h2>
+                <h2 class="texto-linea">Nuestros Valores</h2>
             </div>
         </div>     
     <div class="row">   
         {% for item in ope.valores %}
-            <div class="col-lg-4 col-md-6 col-12">
+            <div class="col-lg-4 col-md-6 col-12 mt-5">
                 <img src="{{item[2]}}" class="img-fluid">
                 <h4><a href="#" data-toggle="modal" data-target="#exampleModal{{loop.index}}">{{ item[0] }}</a></h4>
                 {# <p>{{ item[1] }}</p> #}
@@ -67,7 +67,18 @@
         {% endfor %}
     </div>
 
-   
+    {% for item in ope.cont %}
+        <div class="row mt-5">
+            <div class="col-12 col-md-6">
+                  <h2 class="mb-3">{{item.title}}</h2>
+                  <p>{{item.bodytext}}</p>    
+                  <a href="#">Contactanos</a>  
+            </div>  
+              <div class="col-12 col-md-6 mb-4">
+                 <img src="{{item.image}}" class="img-fluid"> 
+            </div>       
+        </div>
+   {% endfor %}
 </section>
 
 
